@@ -1,4 +1,4 @@
-package app.khatrisoftwares.gmailapi;
+package app.android.gmailapi;
 
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;

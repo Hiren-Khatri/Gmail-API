@@ -1,4 +1,4 @@
-package app.khatrisoftwares.gmailapi;
+package app.android.gmailapi;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -14,7 +14,6 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Toast;
 
 import com.google.api.client.extensions.android.http.AndroidHttp;
@@ -26,7 +25,6 @@ import com.google.api.client.util.ExponentialBackOff;
 import com.google.api.services.gmail.Gmail;
 import com.google.api.services.gmail.model.ListMessagesResponse;
 import com.google.api.services.gmail.model.MessagePartHeader;
-import com.raizlabs.android.dbflow.sql.language.Delete;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -34,8 +32,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static app.khatrisoftwares.gmailapi.MainActivity.PREF_ACCOUNT_NAME;
-import static app.khatrisoftwares.gmailapi.MainActivity.SCOPES;
+import static app.android.gmailapi.MainActivity.PREF_ACCOUNT_NAME;
+import static app.android.gmailapi.MainActivity.SCOPES;
 
 public class InboxActivity extends AppCompatActivity {
 
@@ -148,7 +146,7 @@ public class InboxActivity extends AppCompatActivity {
                 String query = "in:inbox";
                 ListMessagesResponse messageResponse = mService.users().messages().list(user).setQ(query).setMaxResults(20L).setPageToken(InboxActivity.this.pageToken).execute();
                 InboxActivity.this.pageToken = messageResponse.getNextPageToken();
-
+                
                 messageListReceived = new ArrayList<>();
                 List<com.google.api.services.gmail.model.Message> receivedMessages = messageResponse.getMessages();
                 for (com.google.api.services.gmail.model.Message message : receivedMessages) {

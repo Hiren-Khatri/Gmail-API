@@ -1,7 +1,6 @@
-package app.khatrisoftwares.gmailapi;
+package app.android.gmailapi;
 
 import com.google.api.services.gmail.model.MessagePart;
-import com.raizlabs.android.dbflow.annotation.ColumnIgnore;
 
 import org.json.JSONArray;
 import org.json.JSONException;
