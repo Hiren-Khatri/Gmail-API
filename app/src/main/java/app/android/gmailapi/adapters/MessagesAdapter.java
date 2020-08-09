@@ -1,4 +1,4 @@
-package app.android.gmailapi;
+package app.android.gmailapi.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -17,6 +17,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
+
+import app.android.gmailapi.models.Message;
+import app.android.gmailapi.R;
+import app.android.gmailapi.activities.EmailActivity;
 
 public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.MessageViewHolder> {
 
@@ -75,7 +79,7 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.Messag
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext,EmailActivity.class);
+                Intent intent = new Intent(mContext, EmailActivity.class);
                 intent.putExtra("message",message);
                 mContext.startActivity(intent);
             }

@@ -1,4 +1,4 @@
-package app.android.gmailapi;
+package app.android.gmailapi.models;
 
 import com.google.api.services.gmail.model.MessagePart;
 

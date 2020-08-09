@@ -1,4 +1,4 @@
-package app.android.gmailapi;
+package app.android.gmailapi.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import java.util.Calendar;
 import java.util.Locale;
+
+import app.android.gmailapi.models.Message;
+import app.android.gmailapi.R;
 
 public class EmailActivity extends AppCompatActivity {
 

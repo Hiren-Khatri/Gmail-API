@@ -1,4 +1,4 @@
-package app.android.gmailapi;
+package app.android.gmailapi.activities;
 
 import android.Manifest;
 import android.accounts.AccountManager;
@@ -24,6 +24,7 @@ import com.google.api.services.gmail.GmailScopes;
 
 import java.util.Arrays;
 
+import app.android.gmailapi.R;
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
 
